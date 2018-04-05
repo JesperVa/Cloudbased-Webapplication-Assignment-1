@@ -1,0 +1,17 @@
+{
+    "name": "mau/assignment",
+    "description": "Package for the first assignment in the course cloudbased Webapplications, used for a website to extract data from a unicron website",
+    "type": "library",
+    "require": {
+        "monolog/monolog": "^1.23",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "license": "BSD-Clause3",
+    "authors": [
+        {
+            "name": "Jesper Vallett",
+            "email": "Jesper@Vallett.se"
+        }
+    ],
+    "minimum-stability": "stable"
+}
