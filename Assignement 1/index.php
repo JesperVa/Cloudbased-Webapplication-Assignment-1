@@ -3,9 +3,11 @@
 require 'vendor/autoload.php';
 
 $client = new \GuzzleHttp\Client();
-$header = "Accept: application/json";
+$body = 'hello';
+$header = ['Accept' => 'application/json'];
 
-$res = $client->request('GET', 'http://unicorns.idioti.se/',  [$header]);
+
+$res = $client->request('GET', 'http://unicorns.idioti.se/', $header, $body);
 
 echo $res->getBody();
 
