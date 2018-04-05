@@ -1,6 +1,6 @@
 {
     "name": "mau/assignment",
-    "description": "Package for the first assignment in the course cloudbased Webapplications, used for a website to extract data from a unicron website",
+    "description": "Package for the first assignment in the course cloudbased Webapplications, used for a website to extract data from a unicorn website",
     "type": "library",
     "require": {
         "monolog/monolog": "^1.23",
