@@ -3,21 +3,50 @@
 require 'vendor/autoload.php';
 
 $client = new \GuzzleHttp\Client();
-$body = 'hello';
-$header = ['Accept' => 'application/json'];
+$header = ['headers' => ['Accept' => 'application/json']];
+//$id = '1';
+//Use inside response.php
+//$res = $client->request('GET', 'http://unicorns.idioti.se/' .$id, $header);
+$res = $client -> request('GET', 'http://unicorns.idioti.se', $header);
 
-
-$res = $client->request('GET', 'http://unicorns.idioti.se/', $header, $body);
-
-echo $res->getBody();
-
-/*
-if($res->hasHeader('Name')){
-    echo "it exists";
-}
-
-foreach($res->getHeaders() as $name => $values){
-    echo $name . ': ' . implode(', ', $values) . "\r\n";
-} 
-*/
+//Make into an array of every ID
+$data = json_decode($res->getBody());
+//echo $res->getBody();
 ?>
+
+
+<!doctype html>
+<html>
+    <head>
+        <title>Example form</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Example form</h1>
+            <p>Please write in a unicorn ID</p>
+            <form action="response.php" method="get">
+                <div class="form-group">
+                    <label for="id">ID Number: </label>
+                    <input type="text" id="id" name="id" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Send info!" class="btn btn-success">
+                </div>
+            </form>
+        </div>
+
+        <?php
+        foreach($data as $key)
+        {
+            
+            echo $key->{'id'} .'. '; 
+            echo $key->{'name'};
+            echo '<br />';
+        }
+        ?>
+    </body>
+</html>
+
