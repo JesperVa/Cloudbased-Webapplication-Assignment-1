@@ -8,7 +8,7 @@ $client = new \GuzzleHttp\Client();
 $header = ['headers' => ['Accept' => 'application/json']];
 $id = $_GET['id'];
 
-$log = new Logger('Assignment 1');
+$log = new Logger('User');
 $log->pushHandler(new StreamHandler('Info.log', Logger::INFO));
 
 $res = $client->request('GET', 'http://unicorns.idioti.se/' .$id, $header);
