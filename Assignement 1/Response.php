@@ -47,9 +47,5 @@ $log->info('Requested: '. $data->{'name'});
     <br><?php echo $data->{'description'}; ?></br>
     <br><strong>Found by:</strong> <?php echo $data->{'reportedBy'}; ?></br>
 </div>
-
-
-
-
 </body>
 </html>
