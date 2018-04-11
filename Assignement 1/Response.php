@@ -1,12 +1,20 @@
 <?php
 require 'vendor/autoload.php';
 
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
 $client = new \GuzzleHttp\Client();
 $header = ['headers' => ['Accept' => 'application/json']];
 $id = $_GET['id'];
 
+$log = new Logger('Assignment 1');
+$log->pushHandler(new StreamHandler('Info.log', Logger::INFO));
+
 $res = $client->request('GET', 'http://unicorns.idioti.se/' .$id, $header);
 $data = json_decode($res->getBody());
+
+$log->info('Requested: '. $data->{'name'});
 ?>
 
 <html>
