@@ -45,7 +45,7 @@ $data = json_decode($res->getBody());
             echo $key->{'id'} .'. '; 
             echo $key->{'name'};
             //My god
-            echo '<input type="button" align="right" value="Read more" onclick="window.location.href=\'response.php?id='.$key->{'id'}.'\'"/>'; 
+            echo '<input type="button" class="btn btn-outline-primary" value="Read more" onclick="window.location.href=\'response.php?id='.$key->{'id'}.'\'"/>'; 
             echo '<br />';
         }
         ?>
