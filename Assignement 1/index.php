@@ -37,16 +37,17 @@ $data = json_decode($res->getBody());
                 </div>
             </form>
         </div>
-        <div>
+        <div class="container">
         <?php
         foreach($data as $key)
         {
-            
+            echo '<div class = "row" style:"position: absolute;">';
             echo $key->{'id'} .'. '; 
             echo $key->{'name'};
             //My god
-            echo '<input type="button" class="btn btn-outline-primary" value="Read more" onclick="window.location.href=\'response.php?id='.$key->{'id'}.'\'"/>'; 
-            echo '<br />';
+            
+            echo '<input type="button" style = "float:right" class="btn btn-outline-primary" value="Read more" onclick="window.location.href=\'response.php?id='.$key->{'id'}.'\'"/>'; 
+            echo '</div>';
         }
         ?>
         </div>
