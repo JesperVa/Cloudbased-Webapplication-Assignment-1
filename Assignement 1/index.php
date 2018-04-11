@@ -24,7 +24,7 @@ $data = json_decode($res->getBody());
     </head>
     <body>
         <div class="container">
-            <h1>Example form</h1>
+            <h1>Unicorn database</h1>
             <p>Please write in a unicorn ID</p>
             <form action="response.php" method="get">
                 <div class="form-group">
