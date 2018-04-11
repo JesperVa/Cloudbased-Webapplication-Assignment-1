@@ -35,8 +35,11 @@ $log->info('Requested: '. $data->{'name'});
                 <input type="submit" value="Get unicorn!" class="btn btn-success">
             </div>
         </form>
+        <form action="index.php">
+            <div class = "form-group">
+                <input type ="submit" value="Go back to all unicorns" class ="btn btn-success">
+            </div>
     </div>
-
 <h1><?php echo $data->{'name'}; ?></h1>
 <div>
     <img src="<?php echo $data->{'image'};?>">
