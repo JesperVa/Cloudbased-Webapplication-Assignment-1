@@ -19,6 +19,18 @@ $log->info('Requested: '. $data->{'name'});
 
 <html>
 <body>
+    <div class="container">
+        <form action="response.php" method="get">
+            <div class="form-group">
+                <label for="id">ID Number: </label>
+                <input type="text" id="id" name="id" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Get unicorn!" class="btn btn-success">
+            </div>
+        </form>
+    </div>
 
 <h1><?php echo $data->{'name'}; ?></h1>
 <div>

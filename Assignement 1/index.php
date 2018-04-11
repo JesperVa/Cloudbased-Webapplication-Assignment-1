@@ -33,7 +33,7 @@ $data = json_decode($res->getBody());
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" value="Send info!" class="btn btn-success">
+                    <input type="submit" value="Get unicorn!" class="btn btn-success">
                 </div>
             </form>
         </div>
